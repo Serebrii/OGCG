@@ -94,10 +94,10 @@ def get_points():
             try:
                 n = int(input("Введіть кількість точок: "))
                 points = [(random.uniform(-100, 100), random.uniform(-100, 100)) for _ in range(n)]
-                print(f"[+] Успішно згенеровано {n} точок")
+                print(f"Успішно згенеровано {n} точок")
                 return points
             except ValueError:
-                print("[-] Помилка: введіть ціле число")
+                print("Помилка: введіть ціле число")
 
         elif choice == '2':
             if not os.path.exists("points.txt"):
@@ -128,7 +128,7 @@ def main():
 
     print("\nПобудова k-d дерева...")
     kdtree = build_kdtree(points)
-    print("[+] Дерево успішно побудовано")
+    print("Дерево успішно побудовано")
 
     while True:
         print("\n--- МАСОВИЙ ЗАПИТ ---")
